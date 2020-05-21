@@ -1,14 +1,14 @@
 function shapeArea(n) {
-    totalLengthOfPolygon = 2 * n - 1;
-    columnSide = totalLengthOfPolygon;
+    totalLengthAcross = 2 * n - 1;
+    halfOfTotalLenght = totalLengthAcross;
     singleSideLength = 0;
 
-    while (columnSide > 1) {
-        columnSide = columnSide - 2;
-        singleSideLength = singleSideLength + columnSide;
+    while (halfOfTotalLenght > 1) {
+        halfOfTotalLenght = halfOfTotalLenght - 2;
+        singleSideLength = singleSideLength + halfOfTotalLenght;
     }
 
-    shapeArea = 2 * singleSideLength + totalLengthOfPolygon;
+    shapeArea = 2 * singleSideLength + totalLengthAcross;
 
     return shapeArea;
 }
