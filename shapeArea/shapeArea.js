@@ -9,4 +9,6 @@ function shapeArea(n) {
     }
 
     shapeArea = 2 * valueOfSingleSide + lengthOfPolygon;
+
+    return shapeArea;
 }
