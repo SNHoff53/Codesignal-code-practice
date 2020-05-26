@@ -6,7 +6,7 @@ function adjacentElementsProduct(inputArray) {
         var product = inputArray[i] * inputArray[j];
 
         if (product > largestProduct) {
-            largestProduct= product;
+            largestProduct = product;
         }
     }
     
