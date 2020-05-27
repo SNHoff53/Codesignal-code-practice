@@ -1,6 +1,6 @@
 function makeArrayConsecutive2(statues) {
     let numberArray = [];
-    // Order numbers from smallest to greatest
+    numberArray = numberArray.sort()
 
     var count = 0; 
     var j = i +1;
