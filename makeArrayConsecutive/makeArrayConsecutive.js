@@ -2,7 +2,7 @@ function makeArrayConsecutive2(statues) {
     let numberArray = [];
     // Order numbers from smallest to greatest
 
-    // set count = 0; 
+    var count = 0; 
     var j = i +1;
 
     for (var i = 0; i < Array.length; i ++) {
