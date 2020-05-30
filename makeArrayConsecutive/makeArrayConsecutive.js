@@ -5,7 +5,7 @@ function makeArrayConsecutive2(statues) {
     var count = 0;
     var j = i + 1;
 
-    for (var i = 0; i < numberArray.length; i ++) {
+    for (var i = 0; i < numberArray.length - 1; i ++) {
         var diffCheck = j - i - 1;
         
         if (diffCheck != 1) {
