@@ -1,6 +1,6 @@
 function makeArrayConsecutive2(statues) {
     // sorting numbers in array from smallest to largest
-    statues = statues.sort();
+    statues = statues.sort((a, b) => a - b);
     console.log(statues);
 
     // initializing the count to zero
