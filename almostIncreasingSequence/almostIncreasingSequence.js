@@ -12,7 +12,7 @@ function almostIncreasingSequence(sequence) {
            }
        }
        // if (sequence[focusNum] <= sequence[leftNum] && sequence[focusNum] <= sequence[rightNum]){
-       //     // focus is bod
+       //     // focus is bad
        //     countDecrease++;
        // } 
        console.log(countDecrease)
