@@ -7,7 +7,9 @@ function almostIncreasingSequence(sequence) {
        var leftNum = focusNum - 1;
        // checking the number to the right of the focusNum and assigning it to a variable
        var rightNum = focusNum + 1;
+       // consol logging to see if focusNum is greater than or equal to the rightNum
        console.log("focusNum >= rightNum = " + focusNum >= rightNum)
+       // if focusNum is greater or equal to the rightNum, the increase the countDecrease
        if (sequence[focusNum] >= sequence[rightNum]) {
            countDecrease++;
            if (sequence[leftNum] >= sequence[rightNum]) {
