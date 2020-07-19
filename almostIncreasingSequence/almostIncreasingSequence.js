@@ -1,27 +1,25 @@
 function almostIncreasingSequence(sequence) {
+    
     // initializing the countDecrease to zero
    var countDecrease = 0;
-   // iterating through the nunmber sequence
-   for (var focusNum = 1; focusNum < sequence.length - 1; focusNum++) {
-       // checking the number to the left of the focusNum and assigning it to a variable
-       var leftNum = focusNum - 1;
-       // checking the number to the right of the focusNum and assigning it to a variable
+   
+   // iterating through the number sequence checking to see if the rightNum is less than the focusNum 
+   for (var focusNum = 0; focusNum < sequence.length - 1; focusNum++) {
        var rightNum = focusNum + 1;
-       // consol logging to see if focusNum is greater than or equal to the rightNum
-       console.log("focusNum >= rightNum = " + focusNum >= rightNum)
-       // if focusNum is greater or equal to the rightNum, then increase the countDecrease
        if (sequence[focusNum] >= sequence[rightNum]) {
-           countDecrease++;
-           // or if the leftNum is greater or equal to the rightNum, then increase the countDecrease
-           if (sequence[leftNum] >= sequence[rightNum]) {
-               countDecrease++;
-           }
+           sequence.splice(focusNum, 1);
+           break;
        }
-       // if (sequence[focusNum] <= sequence[leftNum] && sequence[focusNum] <= sequence[rightNum]){
-       //     // focus is bad
-       //     countDecrease++;
-       // } 
-       console.log(countDecrease)
    }
-   return countDecrease < 2;
+   
+   for (var index = 0; index < sequence.length - 1; index++) {
+       var rightNum = index + 1;
+       if (sequence[index] >= sequence[rightNum]) {
+           console.log('index broke me: ' + index)
+           return false;
+       }
+       console.log('fine')
+   }
+   console.log(sequence)
+   return  true;
 }
