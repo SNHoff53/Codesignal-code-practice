@@ -23,4 +23,27 @@ function almostIncreasingSequence(sequence) {
            break;
        }
    }
+
+// accounting for whether there is not a duplicate number (therefore no removal) to check the rightNum value to that of the focusNum
+   if (!haveRemoved) {
+       console.log("have not removed duplicate number")
+       if (sequence[sequence.length - 1] < sequence[sequence.length - 2]) {
+           sequence.pop();
+       }
+   }
+   console.log(sequence)
+   for (var index = 0; index < sequence.length - 1; index++) {
+       var rightNum = index + 1;
+       if (sequence[index] >= sequence[rightNum]) {
+           console.log("index broke: " + index)
+           return false;
+       }
+       console.log("all's right")
+   }
+
+   if (sequence[sequence.length - 1] < sequence[sequence.length -2]) {
+       return false;
+   }
+   console.log(sequence);
+   return true;
 };
